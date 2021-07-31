@@ -1,11 +1,11 @@
-const path = require('path');
-const webpack = require("webpack");
+const webpack = require("webpack")
+const path = require("path");
 
 module.exports = {
-    entry: './assets/js/script.js',
+    entry: "./assets/js/script.js",
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'main.bundle.js'
+        path: path.join(__dirname + "/dist"),
+        filename: "main.bundle.js"
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -13,5 +13,5 @@ module.exports = {
             jQuery: "jquery"
         }),
     ],
-    mode: 'development'
+    mode: "development"
 };
